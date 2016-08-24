@@ -89,6 +89,12 @@ def search(words, wordList):
                     maxpt2 = maxpt
                     maxpt = pt
 #    print "%s %s %s" % (resCate1, resCate2, resCate3)
+    resCate = ";".join( [resCate1, resCate2, resCate3] )
+    
+#    if resCate in dropout_data:
+#        percent = dropout_data[resCate]
+#        rnd = 
+    
     return resCate1, resCate2, resCate3, resCate4, resCate5, resCate6, resCate7, resCate8, resCate9, maxPoint, maxPoint2, maxpt, maxpt2
     
 def check_correct(cate1, cate2, cate3, words):
@@ -138,6 +144,11 @@ file.close()
 file = open('test_data.txt', 'r')
 data = file.read()
 test_data = json.loads(data)
+file.close()
+
+file = open('dropout_data.txt', 'r')
+data = file.read()
+dropout_data = json.loads(data)
 file.close()
 
 filter = [u"즉시", u"할인", u"쿠폰", u"해외", u"포장", u"출고", u"무료", u"카드", u"[", u"]",
@@ -236,10 +247,6 @@ print str(accur/sum*100) + "%"
 
 
 
-###################
-# test category   #
-###################
-
 #
 dropout_data = {}
 for row in cate_correct_list:
@@ -253,4 +260,8 @@ jsontext = json.dumps(dropout_data)
 file = open('dropout_data.txt','w')
 file.write(jsontext)
 file.close()
+
+
+
+
 

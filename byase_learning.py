@@ -101,6 +101,9 @@ for index, row in train_df.iterrows():
     for j in range(len(words)-1):
         words.append( "".join([words[j], words[j+1]] ))
     
+#    for j in range(len(words)-2):
+#        words.append( "".join([words[j], words[j+1], words[j+2]] ))
+    
     for j in range(len(name)):
         words.append(name[j:j+1])
     
@@ -121,7 +124,7 @@ for index, row in train_df.iterrows():
 #                                if wordList[cate1][cate2][cate3][word] == 0 :
 #                                    wordList[cate1][cate2][cate3][word] = 1
 #                                else :
-                            wordList[cate1][cate2][cate3][word]+=1
+                            wordList[cate1][cate2][cate3][word]+=100
                             break
                         else :
                             wordList[cate1][cate2][cate3][word] = 0
