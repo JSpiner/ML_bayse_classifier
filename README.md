@@ -1,10 +1,12 @@
 # ML_bayse_classifier
 SoftwareMaestro 과제 머신러닝
 
-서버 주소(classifier) : http://40.74.112.15:8887/classifier
-소스코드 : https://github.com/JSpiner/ML_bayse_classifier
-랭크 이름 : 러닝 머신(bayse)-v0.0.2  러닝 머신(bayse)-v0.0.5  
-구동방식
+서버 주소(classifier) : http://40.74.112.15:8887/classifier  
+소스코드 : https://github.com/JSpiner/ML_bayse_classifier  
+랭크 이름 : 러닝 머신(bayse)-v0.0.2  러닝 머신(bayse)-v0.0.5    
+
+
+# 구동방식
  
 제공해주신 소스를 사용하지 않고 직접 베이즈 정리를 이용해 구현해보았습니다.
 트리형태로 주어진 자료를 나눠서 카테고리를 구성하고
@@ -15,7 +17,7 @@ KONLPY.Twitter 형태소 분석기를 이용해
 p = log( (count + 1) / ( len(cates) + len(all_cates) )식을 이용해 계산했습니다.
  
  
-추가로 시도해봤던 방식
+# 추가로 시도해봤던 방식
  
 1. 타 언어로 번역후 처리 -> 마이크로소프트 번역 api를 썼으나 timeout으로 인해 성능 평가를 제대로 하지 못했습니다.
 2. 단어별 중요도 처리 -> 단어별 중요도를 빈도수에 따라 차등하여 count를 제곱하거나 곱하는 등의 시도를 했으나 추후 smoothing기법을 적용한 인식률이 더 좋았습니다.
