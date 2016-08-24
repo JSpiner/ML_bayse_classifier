@@ -8,13 +8,13 @@ SoftwareMaestro 과제 머신러닝
 
 # 구동방식
  
-제공해주신 소스를 사용하지 않고 직접 베이즈 정리를 이용해 구현해보았습니다.
-트리형태로 주어진 자료를 나눠서 카테고리를 구성하고
-분류에 방해가 되는 단어들을 필터링 한 뒤
-KONLPY.Twitter 형태소 분석기를 이용해
-상품명을 쪼개 배열에 담은 뒤 단어자체를 n_gram(2)하고 문장전체를 n_gram(1)하여 count하였습니다.
-그 뒤 p = count / len(cates) 식을 개선해 smoothing 기법을 사용해
-p = log( (count + 1) / ( len(cates) + len(all_cates) )식을 이용해 계산했습니다.
+- 제공해주신 소스를 사용하지 않고 직접 베이즈 정리를 이용해 구현해보았습니다.
+- 트리형태로 주어진 자료를 나눠서 카테고리를 구성하고
+- 분류에 방해가 되는 단어들을 필터링 한 뒤
+- KONLPY.Twitter 형태소 분석기를 이용해
+- 상품명을 쪼개 배열에 담은 뒤 단어자체를 n_gram(2)하고 문장전체를 n_gram(1)하여 count하였습니다.
+- 그 뒤 p = count / len(cates) 식을 개선해 smoothing 기법을 사용해
+- p = log( (count + 1) / ( len(cates) + len(all_cates) )식을 이용해 계산했습니다.
  
  
 # 추가로 시도해봤던 방식
